@@ -1,28 +1,44 @@
-# Aplicador de Expressão Regular
-Este é um simples aplicador de expressões regulares com interface gráfica construído em Python usando a biblioteca *tkinter*.
+
+## Validador de Entrada
+Este é um aplicativo construído em Python com interface gráfica usando Tkinter. 
+Ele permite validar diferentes tipos de entradas de acordo com expressões regulares predefinidas.
 
 ## Funcionalidades
-O aplicativo permite que você insira uma expressão regular e uma frase. Ao clicar no botão "Atualizar", a expressão regular é aplicada à frase, substituindo os padrões encontrados por '***'. 
+- Seleção de Tipo de Validação: Escolha o tipo de validação a ser aplicado a partir de uma lista pré-definida, como Dígito, Decimal, Letra, URL, E-mail, entre outros.
 
-O resultado é exibido na interface gráfica.
+- Atualização Automática da Expressão Regular: Quando um tipo de validação é selecionado, a expressão regular correspondente é automaticamente exibida.
 
-## Requisitos
-Certifique-se de ter Python instalado em seu sistema. O código utiliza a biblioteca padrão re para manipulação de expressões regulares e a biblioteca tkinter para a interface gráfica.
+- Validação de Entrada: Insira um valor e clique no botão "Validar" para verificar se ele corresponde ao tipo selecionado.
 
-## Como Utilizar
-1. Execute o código em um ambiente Python.
-2. Insira a expressão regular desejada no campo "Expressão Regular".
-3. Insira a frase na qual você deseja aplicar a expressão regular no campo "Frase".
+## Tipos de Validação Suportados
 
-4. Clique no botão "Atualizar" para ver o resultado da aplicação da expressão regular.
+- ```Dígito```: Verifica se a entrada contém apenas dígitos.
 
-### Exemplo
- - Entrada:
-   - Expressão Regular: a\w+
-   - Frase: A palavra é importante.
+- ```Decimal```: Verifica se a entrada é um número decimal válido.
 
-- Saída:
-  - Frase com a expressão regular aplicada: A palavra é importante.
+- ```Letra```: Verifica se a entrada contém apenas letras.
 
-## Contribuições
-Sinta-se à vontade para contribuir ou fazer melhorias neste aplicativo. Basta fazer um fork do repositório e enviar um pull request.
+- ```URL```: Verifica se a entrada é uma URL válida.
+
+- ```E-mail```: Verifica se a entrada é um endereço de e-mail válido.
+
+- ```Endereço IP```: Verifica se a entrada é um endereço IP válido.
+
+- ```Tempo (24 horas)```: Verifica se a entrada é uma hora válida no formato de 24 horas.
+
+- ```Data (dd/mm/aaaa)```: Verifica se a entrada é uma data válida no formato dd/mm/aaaa.
+
+- ```Telefone```: Verifica se a entrada é um número de telefone válido no formato (DDD)-NNNN-NNNN.
+
+- ```Senha```: Verifica se a entrada é uma senha válida, seguindo critérios específicos.
+
+## Como Usar
+1. Selecione o tipo de validação desejado no menu suspenso.
+    - A expressão regular correspondente ao tipo selecionado será exibida automaticamente.
+
+2. Insira a entrada que deseja validar no campo "Entrada".
+    - Clique no botão "Validar" para ver o resultado da validação.
+
+## Requisitos de Sistema
+- Python 3.x
+- Tkinter (geralmente incluído na instalação padrão do Python)
