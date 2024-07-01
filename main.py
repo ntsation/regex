@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import messagebox
 import re
 
+
 def obter_padrao(tipo):
     expressoes = {
         "Dígito": r'^\d+$',
@@ -17,6 +18,7 @@ def obter_padrao(tipo):
     }
     return expressoes.get(tipo, "Tipo não reconhecido")
 
+
 def validar_entrada():
     tipo = tipo_var.get()
     entrada = entrada_entry.get()
@@ -26,15 +28,19 @@ def validar_entrada():
     if padrao == "Tipo não reconhecido":
         messagebox.showerror("Erro", f"Tipo '{tipo}' não reconhecido.")
     elif re.match(padrao, entrada):
-        messagebox.showinfo("Validação", f"A entrada '{entrada}' é válida para o tipo '{tipo}'.")
+        messagebox.showinfo("Validação", f"A entrada '{
+                            entrada}' é válida para o tipo '{tipo}'.")
     else:
-        messagebox.showerror("Validação", f"A entrada '{entrada}' não é válida para o tipo '{tipo}'.")
+        messagebox.showerror("Validação", f"A entrada '{
+                             entrada}' não é válida para o tipo '{tipo}'.")
+
 
 def atualizar_padrao(*args):
     tipo = tipo_var.get()
     padrao = obter_padrao(tipo)
     padrao_entry.delete(0, tk.END)
     padrao_entry.insert(0, padrao)
+
 
 # Criando a janela principal
 root = tk.Tk()
